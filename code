@@ -1,0 +1,20 @@
+import random
+
+rang = int(input("Pick a number that is greater than 0 "))
+
+if rang > 0:
+    while True:
+        random_number = random.randrange(rang)
+        guess = int(input("Enter a number: "))
+        if guess == random_number:
+            print("You got it!")
+            again = input("Wanna try again? ")
+            if again == "yes":
+                continue
+            else:
+                break
+        else:
+            print("Keep trying")
+            continue
+else:
+    print("Pick a number greater than 0 ")
